@@ -1,0 +1,9 @@
+ build.gradle                                       |  5 [32m+++[m
+ .../spring/apiPayload/code/status/ErrorStatus.java |  8 [32m+++[m[31m--[m
+ src/main/java/umc/spring/config/SwaggerConfig.java | 37 [32m+++++++++++++++++++++[m[31m-[m
+ src/main/java/umc/spring/domain/Member.java        | 11 [32m++++++[m[31m-[m
+ src/main/java/umc/spring/domain/enums/Gender.java  |  2 [32m+[m[31m-[m
+ .../umc/spring/domain/mapping/MemberPrefer.java    | 11 [32m+++++++[m
+ .../spring/repository/FoodCategoryRepository.java  |  5 [32m++[m[31m-[m
+ .../umc/spring/repository/MemberRepository.java    | 14 [32m+++++++[m[31m-[m
+ 8 files changed, 86 insertions(+), 7 deletions(-)
