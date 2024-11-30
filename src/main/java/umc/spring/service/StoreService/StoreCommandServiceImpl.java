@@ -10,7 +10,7 @@ import umc.spring.apiPayload.code.status.ErrorStatus;  // ErrorStatus import 추
 import umc.spring.repository.RegionRepository;
 import umc.spring.repository.StoreRepository.StoreRepository;
 import umc.spring.converter.StoreConverter;
-import umc.spring.web.dto.StoreRequestDTO.CreateStoreDTO;
+import umc.spring.web.dto.StoreDTO.StoreRequestDTO.CreateStoreDTO;
 
 @Service
 @RequiredArgsConstructor

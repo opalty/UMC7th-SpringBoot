@@ -7,13 +7,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestParam;
 import umc.spring.converter.TempConverter;  // TempConverter 클래스 import
-import umc.spring.web.dto.TempResponse;  // TempResponse 클래스 import
+import umc.spring.web.dto.TempDTO.TempResponse;  // TempResponse 클래스 import
 import umc.spring.apiPayload.ApiResponse;  // ApiResponse 클래스 import
 import umc.spring.service.TempService.TempQueryService;
 
 //빈 지정
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 
 
 @RestController

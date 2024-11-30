@@ -1,8 +1,8 @@
 package umc.spring.converter;
 
 // 필요한 import 문
-import umc.spring.web.dto.TempResponse; // TempResponse 클래스 위치
-import umc.spring.web.dto.TempResponse.TempTestDTO; // TempTestDTO 클래스 접근을 위해
+import umc.spring.web.dto.TempDTO.TempResponse; // TempResponse 클래스 위치
+
 
 public class TempConverter {
 

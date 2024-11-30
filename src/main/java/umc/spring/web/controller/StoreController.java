@@ -10,10 +10,10 @@ import umc.spring.apiPayload.ApiResponse;
 import umc.spring.converter.StoreConverter;
 import umc.spring.domain.Store;
 import umc.spring.service.StoreService.StoreCommandService;
-import umc.spring.web.dto.StoreRequestDTO;
-import umc.spring.web.dto.StoreResponseDTO;
+import umc.spring.web.dto.StoreDTO.StoreRequestDTO;
+import umc.spring.web.dto.StoreDTO.StoreResponseDTO;
 
-
+//8주차 미션, 특정 지역에 가게 추가하기 API
 @RestController
 @RequestMapping("/stores")
 @RequiredArgsConstructor

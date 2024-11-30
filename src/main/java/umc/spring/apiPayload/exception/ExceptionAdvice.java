@@ -25,6 +25,8 @@ import umc.spring.apiPayload.code.status.ErrorStatus;
 
 //8주차 미션
 import umc.spring.apiPayload.exception.handler.StoreRegionHandler;
+import org.springframework.validation.BindingResult;
+
 
 @Slf4j
 @RestControllerAdvice(annotations = {RestController.class})

@@ -1,4 +1,4 @@
-package umc.spring.web.dto;
+package umc.spring.web.dto.TempDTO;
 
 // 필요한 Lombok 어노테이션 import
 import lombok.Builder;

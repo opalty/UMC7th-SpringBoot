@@ -2,8 +2,8 @@ package umc.spring.converter;
 
 import umc.spring.domain.Store;
 import umc.spring.domain.Region;
-import umc.spring.web.dto.StoreRequestDTO.CreateStoreDTO;
-import umc.spring.web.dto.StoreResponseDTO;
+import umc.spring.web.dto.StoreDTO.StoreRequestDTO.CreateStoreDTO;
+import umc.spring.web.dto.StoreDTO.StoreResponseDTO;
 
 import org.springframework.stereotype.Component;
 @Component
