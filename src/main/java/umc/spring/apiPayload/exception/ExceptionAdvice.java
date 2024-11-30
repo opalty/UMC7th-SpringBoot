@@ -23,6 +23,9 @@ import umc.spring.apiPayload.ApiResponse;
 import umc.spring.apiPayload.code.ErrorReasonDTO;
 import umc.spring.apiPayload.code.status.ErrorStatus;
 
+//8주차 미션
+import umc.spring.apiPayload.exception.handler.StoreRegionHandler;
+
 @Slf4j
 @RestControllerAdvice(annotations = {RestController.class})
 public class ExceptionAdvice extends ResponseEntityExceptionHandler {
@@ -55,10 +58,19 @@ public class ExceptionAdvice extends ResponseEntityExceptionHandler {
         return handleExceptionInternalFalse(e, ErrorStatus._INTERNAL_SERVER_ERROR, HttpHeaders.EMPTY, ErrorStatus._INTERNAL_SERVER_ERROR.getHttpStatus(), request, e.getMessage());
     }
 
+    // 기존 GeneralException 예외 처리 핸들러
     @ExceptionHandler(value = GeneralException.class)
     public ResponseEntity onThrowException(GeneralException generalException, HttpServletRequest request) {
         ErrorReasonDTO errorReasonHttpStatus = generalException.getErrorReasonHttpStatus();
         return handleExceptionInternal(generalException, errorReasonHttpStatus, null, request);
+    }
+
+    // 8주차 미션, StoreRegionHandler 예외 처리
+    @ExceptionHandler(value = StoreRegionHandler.class)
+    public ResponseEntity<Object> handleStoreRegionException(StoreRegionHandler storeRegionHandler, HttpServletRequest request) {
+        // StoreRegionHandler의 코드와 메시지를 ErrorReasonDTO에서 가져옴
+        ErrorReasonDTO errorReason = storeRegionHandler.getErrorReasonHttpStatus();
+        return handleExceptionInternal(storeRegionHandler, errorReason, null, request);
     }
 
     private ResponseEntity<Object> handleExceptionInternal(Exception e, ErrorReasonDTO reason, HttpHeaders headers, HttpServletRequest request) {
