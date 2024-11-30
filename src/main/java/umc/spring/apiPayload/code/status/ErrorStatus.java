@@ -32,7 +32,10 @@ public enum ErrorStatus implements BaseErrorCode {
 
     // Store 관련 오류, 8주차 미션
     STORE_REGION_NOT_FOUND(HttpStatus.NOT_FOUND, "STORE4001", "지역을 찾을 수 없습니다."),
-    STORE_NOT_FOUND(HttpStatus.NOT_FOUND, "STORE4002", "해당 가게는 존재하지 않습니다.");
+    STORE_NOT_FOUND(HttpStatus.NOT_FOUND, "STORE4002", "해당 가게는 존재하지 않습니다."),
+    // 미션 관련 오류 추가, 8주차 미션
+    MISSION_NOT_FOUND(HttpStatus.NOT_FOUND, "MISSION4001", "미션이 존재하지 않습니다."),
+    MISSION_ALREADY_ADD_MEMBER(HttpStatus.BAD_REQUEST, "MISSION4002", "이미 도전 중인 미션입니다.");
 
 
     private final HttpStatus httpStatus;

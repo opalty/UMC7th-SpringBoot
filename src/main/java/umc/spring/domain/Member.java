@@ -74,4 +74,8 @@ public class Member extends BaseEntity {
     @OneToMany(mappedBy = "member", cascade = CascadeType.ALL)
     private List<MemberMission> memberMissionList = new ArrayList<>();
 
+    public void addMemberMission(MemberMission memberMission) {
+        this.memberMissionList.add(memberMission);
+    }
+
 }
