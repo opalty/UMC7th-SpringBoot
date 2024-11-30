@@ -27,7 +27,7 @@ public class ReviewCommandServiceImpl implements ReviewCommandService {
 
     @Override
     @Transactional
-    public Review addReview(ReviewRequestDTO request) {  // Member 파라미터 제거
+    public Review addReview(ReviewRequestDTO request) {
         // 요청 받은 storeId로 가게 존재 여부 확인
         Store store = storeRepository.findById(request.getStoreId())
                 .orElseThrow(() -> new StoreRegionHandler(ErrorStatus.STORE_NOT_FOUND));
